@@ -51,11 +51,13 @@ class AppTheme {
         fontWeight: FontWeight.bold,
       ),
     ),
-    floatingActionButtonTheme: const FloatingActionButtonThemeData(
+    floatingActionButtonTheme: FloatingActionButtonThemeData(
       backgroundColor: primaryGreen,
       foregroundColor: Colors.white,
       elevation: 4,
-      shape: CircleBorder(),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
+      ),
     ),
   );
 
@@ -90,11 +92,13 @@ class AppTheme {
         fontWeight: FontWeight.bold,
       ),
     ),
-    floatingActionButtonTheme: const FloatingActionButtonThemeData(
+    floatingActionButtonTheme: FloatingActionButtonThemeData(
       backgroundColor: primaryGreen,
       foregroundColor: Colors.white,
       elevation: 4,
-      shape: CircleBorder(),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
+      ),
     ),
   );
 }

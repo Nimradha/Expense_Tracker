@@ -215,16 +215,32 @@ class _SummaryScreenState extends State<SummaryScreen> {
 
             // ================= 3. CHART TOGGLE & VISUALIZATION =================
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
-                  'Spending Analytics',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                const Expanded(
+                  child: Text(
+                    'Spending Analytics',
+                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+                  ),
                 ),
+                const SizedBox(width: 8),
                 SegmentedButton<int>(
+                  showSelectedIcon: false,
+                  style: SegmentedButton.styleFrom(
+                    visualDensity: VisualDensity.compact,
+                    tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                    textStyle: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600),
+                  ),
                   segments: const [
-                    ButtonSegment(value: 0, icon: Icon(Icons.pie_chart_rounded, size: 16), label: Text('Category')),
-                    ButtonSegment(value: 1, icon: Icon(Icons.bar_chart_rounded, size: 16), label: Text('Weekly')),
+                    ButtonSegment(
+                      value: 0,
+                      icon: Icon(Icons.pie_chart_rounded, size: 16),
+                      label: Text('Category'),
+                    ),
+                    ButtonSegment(
+                      value: 1,
+                      icon: Icon(Icons.bar_chart_rounded, size: 16),
+                      label: Text('Weekly'),
+                    ),
                   ],
                   selected: {_selectedChartTab},
                   onSelectionChanged: (val) => setState(() => _selectedChartTab = val.first),

@@ -49,3 +49,8 @@ macos/Flutter/ephemeral/
 !**/ios/**/default.mode2v3
 !**/ios/**/default.pbxuser
 !**/ios/**/default.perspectivev3
+
+# IDE
+.idea/
+*.iml
+.vscode/

@@ -60,6 +60,9 @@ class DashboardScreen extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton.extended(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+        ),
         onPressed: () {
           AddExpenseModal.show(
             context,
@@ -75,10 +78,13 @@ class DashboardScreen extends StatelessWidget {
             },
           );
         },
-        icon: const Icon(Icons.add_rounded, size: 24),
+        icon: const Icon(Icons.add_rounded, size: 22),
         label: const Text(
           'Add Expense',
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            letterSpacing: 0.3,
+          ),
         ),
       ),
       body: CustomScrollView(
